@@ -5,6 +5,8 @@
  */
 package esttructurasbasicas;
 
+import java.util.Scanner;
+
 /**
  *
  * @author user
@@ -16,6 +18,27 @@ public class EsttructurasBasicas {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        int cantidad = 0;
+        int desgloce = 0;
+        Scanner sc = new Scanner (System.in);
+       
+        System.out.println("Bienvenido, que cantidad desea retirar?");
+        cantidad = sc.nextInt();
+        
+        if (cantidad>=500) {
+            desgloce = cantidad / 500;
+            System.out.println("Billetes " + desgloce + " billetes de 500 Lempiras");
+            cantidad = cantidad % 500;
+        }
+         if (cantidad>=200) {
+            desgloce = cantidad / 200;
+            System.out.println("Billetes " + desgloce + " billetes de 200 Lempiras");
+            cantidad = cantidad % 200;
+        }
+        
+        
+        
     }
     
 }
